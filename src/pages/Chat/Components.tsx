@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 
 
-let primaryColor = '#5EFFFD';
-let mainFont = 'monospace';
+const primaryColor = '#5EFFFD';
+const mainFont = 'monospace';
+
 export const Background = styled.section`
     background-color: black;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    min-width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
 `;
 
 export const Navigation = styled.header`
@@ -70,12 +74,19 @@ export const Minimize = styled.div`
     display: grid;
     place-content: center;
     margin-left: 1rem;
+    cursor: pointer;
     ::before {
         content: '';
         display: block;
         height: 2px;
         width: 1rem;
         background-color: white;
+    }
+
+    :hover {
+        ::before {
+            background-color: ${primaryColor};
+        }
     }
 `;
 
@@ -85,12 +96,18 @@ export const Expand = styled.div`
     display: grid;
     place-content: center;
     margin-left: 1rem;
+    cursor: pointer;
     ::before {
         content: '';
         display: block;
         height: .8rem;
         width: .8rem;
         border: 2px solid white;
+    }
+    :hover {
+        ::before {
+            border-color: ${primaryColor};
+        }
     }
 `;
 

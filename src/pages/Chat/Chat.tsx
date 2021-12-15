@@ -1,5 +1,5 @@
-import React from 'react';
-import { Background, Navigation, Exit, Minimize, Expand, PageTitle } from './Components';
+import Terminal from '../../Components/Terminal/Terminal';
+import { Background, Navigation, Exit, Minimize, Expand, PageTitle} from './Components';
 
 const Chat = () => {
 
@@ -10,9 +10,10 @@ const Chat = () => {
                 <Minimize />
                 <Expand />
                 <PageTitle>
-                    user@micro-chat
+                    Welcome to Micro Chan 😺
                 </PageTitle>
             </Navigation>
+            <Terminal />
         </Background>
     );
 }
